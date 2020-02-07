@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var isDefaultStatusBar = true
+    
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var themeSwitch: UISwitch!
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+        setTheme(isDark: false)
 
         if self.billAmountTextField.isFirstResponder {
             self.billAmountTextField.resignFirstResponder()
@@ -42,8 +45,12 @@ class ViewController: UIViewController {
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return isDefaultStatusBar ? .default : .lightContent
+    }
+    
     @IBAction func themeToggled(_ sender: UISwitch) {
-        
+        setTheme(isDark: sender.isOn)
     }
     
     @IBAction func tipPercentChanged(_ sender: Any) {
@@ -112,6 +119,31 @@ class ViewController: UIViewController {
 
         resetButton.layer.cornerRadius = 8
         resetButton.layer.masksToBounds = true
+    }
+    
+    func setTheme(isDark: Bool) {
+        let theme = isDark ? ColorTheme.dark : ColorTheme.light
+
+        view.backgroundColor = theme.viewControllerBackgroundColor
+
+        headerView.backgroundColor = theme.primaryColor
+        titleLabel.textColor = theme.primaryTextColor
+
+        inputCardView.backgroundColor = theme.secondaryColor
+
+        billAmountTextField.tintColor = theme.accentColor
+        tipPercentSegmentedControl.tintColor = theme.accentColor
+
+        outputCardView.backgroundColor = theme.primaryColor
+        outputCardView.layer.borderColor = theme.accentColor.cgColor
+
+        tipAmountTitleLabel.textColor = theme.primaryTextColor
+        totalAmountTitleLabel.textColor = theme.primaryTextColor
+
+        tipAmountLabel.textColor = theme.outputTextColor
+        totalAmountLabel.textColor = theme.outputTextColor
+
+        resetButton.backgroundColor = theme.secondaryColor
     }
 }
 
