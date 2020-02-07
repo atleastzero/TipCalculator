@@ -55,13 +55,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIc-tn-lUa">
                                                         <rect key="frame" x="0.0" y="0.0" width="99" height="117.66666666666667"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="120" id="mFO-HV-Seu"/>
+                                                            <constraint firstAttribute="width" constant="160" id="mFO-HV-Seu"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" name="tcWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="redraw" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="GTI-BT-MOP">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTI-BT-MOP" customClass="BillAmountTextField" customModule="TipCalculatorStarter" customModuleProvider="target">
                                                         <rect key="frame" x="232" y="0.0" width="118" height="117.66666666666667"/>
                                                         <color key="tintColor" name="tcHotPink"/>
                                                         <constraints>
@@ -121,10 +121,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="96" translatesAutoresizingMaskIntoConstraints="NO" id="GCw-8d-uLG">
                                         <rect key="frame" x="22" y="35.000000000000014" width="350" height="218.33333333333337"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="168" translatesAutoresizingMaskIntoConstraints="NO" id="8iJ-EV-sBY">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="168" translatesAutoresizingMaskIntoConstraints="NO" id="8iJ-EV-sBY">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="98.333333333333329"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iml-uR-JTI">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iml-uR-JTI">
                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="98.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="110" id="5vI-Cp-Ccd"/>
@@ -133,7 +133,7 @@
                                                         <color key="textColor" name="tcCharcoal"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKy-Ov-ZnO">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKy-Ov-ZnO">
                                                         <rect key="frame" x="278" y="0.0" width="72" height="98.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <color key="textColor" name="tcBlack"/>
@@ -141,10 +141,10 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="166" translatesAutoresizingMaskIntoConstraints="NO" id="CUm-bI-UJf">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="166" translatesAutoresizingMaskIntoConstraints="NO" id="CUm-bI-UJf">
                                                 <rect key="frame" x="0.0" y="194.33333333333331" width="350" height="24"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aU-Pf-eW4">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aU-Pf-eW4">
                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="110" id="F9J-3Q-f09"/>
@@ -153,7 +153,7 @@
                                                         <color key="textColor" name="tcCharcoal"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjw-nL-8Dz">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjw-nL-8Dz">
                                                         <rect key="frame" x="276" y="0.0" width="74" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <color key="textColor" name="tcBlack"/>
@@ -165,6 +165,7 @@
                                         <constraints>
                                             <constraint firstItem="8iJ-EV-sBY" firstAttribute="width" secondItem="GCw-8d-uLG" secondAttribute="width" id="7jI-u6-acD"/>
                                             <constraint firstItem="CUm-bI-UJf" firstAttribute="width" secondItem="GCw-8d-uLG" secondAttribute="width" id="FfG-Vp-aUp"/>
+                                            <constraint firstItem="8iJ-EV-sBY" firstAttribute="height" secondItem="CUm-bI-UJf" secondAttribute="height" multiplier="4.09722" id="vrZ-cx-knU"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -214,7 +215,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="billAmountTextField" destination="5I6-eC-N0r" id="h9X-s4-H0h"/>
+                        <outlet property="billAmountTextField" destination="GTI-BT-MOP" id="uXd-JU-zah"/>
                         <outlet property="headerView" destination="uae-ci-apE" id="w9R-XP-06q"/>
                         <outlet property="inputCardView" destination="1Vn-1U-zI3" id="3xx-AM-2lP"/>
                         <outlet property="outputCardView" destination="9Z6-xe-sQB" id="aOi-8i-vgu"/>
