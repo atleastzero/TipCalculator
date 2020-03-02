@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         setTheme(isDark: sender.isOn)
     }
     
-    @IBAction func tipPercentChanged(_ sender: Any) {
+    @IBAction func tipPercentChanged(_ sender: UISegmentedControl) {
         calculate()
     }
     
