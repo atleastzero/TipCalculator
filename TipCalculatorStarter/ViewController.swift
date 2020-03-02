@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         calculate()
     }
     
-    @IBAction func resetButtonTapped(_ sender: Any) {
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
         clear()
     }
     
